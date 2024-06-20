@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import shopAll from "../../assets/images/Funko/fandoms/shop_all.png"
 import fandoms_fav from "../../assets/images/Funko/fandoms/fandoms_fav.png"
 import vdo_games from "../../assets/images/Funko/fandoms/vdo_games.png"
@@ -23,6 +24,11 @@ import pro_a from "../../assets/images/Funko/product/home-product/pro_a.png"
 import pro_b from "../../assets/images/Funko/product/home-product/pro_b.png"
 
 const Header = () => {
+	const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/Logout');
+  };
   return (
     <>
     <section className="top-header">
@@ -113,7 +119,7 @@ const Header = () => {
                     {/* <!-- / Languages --> */}
 
                     <li className="ps-5 ms-5">
-						<a href="/login.html">Login</a>
+						<button  style={{border:'none',height:'3em',width:'5em'}} onClick={handleLogout}>Logout</button	>
 					</li>
 
 				</ul>

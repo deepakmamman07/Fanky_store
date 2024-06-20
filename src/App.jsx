@@ -1,20 +1,15 @@
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/common/Header'
-import Footer from './Components/common/Footer';
-import HomePage from './pages/HomePage';
+import AppRoutes from './Components/Routes/Routess';
 
 
 function App() {
   
-
   return (
-  <>
-   <Header />
-   <HomePage/>
-   <Footer/>
-  </>
+   
+   <AppRoutes />
+   
   )
 }
 
